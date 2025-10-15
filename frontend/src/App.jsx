@@ -17,7 +17,9 @@ import {
   XCircle,
 } from "lucide-react";
 
-const API_URL = "http://localhost:3001/api";
+const API_URL = import.meta.env.VITE_API_URL
+  ? `${import.meta.env.VITE_API_URL}/api`
+  : "/api";
 
 export default function FortniteChecker() {
   const [isLoading, setIsLoading] = useState(false);
