@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: fortnite-checker-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        generateValue: false
+        value: 10000
+      - key: SWITCH_TOKEN
+        sync: false
+      - key: IOS_TOKEN
+        sync: false
